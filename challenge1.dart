@@ -1,7 +1,7 @@
 void main() {
   printName("Anfal");
   printAge(1993);
-  printHello("Hola", "Anfal");
+  printHello("en", "Anfal");
   printMax(20, 10);
 }
 
@@ -38,12 +38,12 @@ void printAge(int birthYear) {
  * -- tr: it should print `Merhaba NAME`
  */
 void printHello(String language, String name) {
-  if (language == "Hello") {
-    print(language + name);
-  } else if (language == "Hola") {
-    print(language + name);
-  } else if (language == "Bonjour") {
-    print(language + name);
+  if (language == "en") {
+    print("Hello" + name);
+  } else if (language == "es") {
+    print("Hola" + name);
+  } else if (language == "fr") {
+    print("Bonjour" + name);
   } else {
     print(language + name);
   }

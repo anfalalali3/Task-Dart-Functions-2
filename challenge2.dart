@@ -1,6 +1,12 @@
 void main() {
   greet("Anfal");
   print(isOdd(5));
+  var result = oddsSmallerThan(7);
+  var result2 = oddsSmallerThan(15);
+  print(result);
+  print(result2);
+  print("the squere of number 16 is:${squareOrDouble(16)}");
+  print(squareOrDouble(9));
 }
 
 /**
@@ -41,10 +47,16 @@ bool isOdd(int n) {
  * oddsSmallerThan(7) -> 3
  * oddsSmallerThan(15) -> 7
  */
-// int oddsSmallerThan(int n) {
-//   // Your code here
-  
-// }
+int oddsSmallerThan(int n) {
+  int total = 0;
+
+  for (int i = 1; i < n; i++) {
+    if (isOdd(i)) {
+      total++;
+    }
+  }
+  return total;
+}
 
 /**
  * squareOrDouble(n):
@@ -56,6 +68,10 @@ bool isOdd(int n) {
  * squareOrDouble(16) -> 32
  * squareOrDouble(9) -> 81
  */
-// int squareOrDouble(int n) {
-//   // Your code here
-// }
+int squareOrDouble(int n) {
+  if (isOdd(n)) {
+    return n * n;
+  } else {
+    return n * 2;
+  }
+}
